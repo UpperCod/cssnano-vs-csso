@@ -5,29 +5,29 @@
     "Result: readCss": {
         "name": "Result: readCss",
         "entryType": "measure",
-        "startTime": 841.880399,
-        "duration": 25.638701,
+        "startTime": 677.864401,
+        "duration": 31.2835,
         "size": 2380419
     },
     "Result: Postcss + Csso": {
         "name": "Result: Postcss + Csso",
         "entryType": "measure",
-        "startTime": 868.0552,
-        "duration": 2386.079299,
+        "startTime": 709.8185,
+        "duration": 2379.3076,
         "size": 1582221
     },
     "Result: Cssnano": {
         "name": "Result: Cssnano",
         "entryType": "measure",
-        "startTime": 3254.218599,
-        "duration": 8474.700701,
+        "startTime": 3089.196501,
+        "duration": 8886.4112,
         "size": 1926020
     },
     "Result: Csso": {
         "name": "Result: Csso",
         "entryType": "measure",
-        "startTime": 11729.0045,
-        "duration": 1031.7848,
+        "startTime": 11975.7024,
+        "duration": 1086.3164,
         "size": 1582221
     }
 }
