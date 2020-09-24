@@ -23,7 +23,11 @@
         "url": "https://github.com/UpperCod/pkg_name/issues"
     },
     "homepage": "https://github.com/UpperCod/pkg_name#readme",
-    "dependencies": {},
+    "dependencies": {
+        "cssnano": "^4.1.10",
+        "csso": "^4.0.3",
+        "tailwindcss": "^1.8.10"
+    },
     "devDependencies": {
         "@rollup/plugin-node-resolve": "^8.1.0",
         "ava": "^3.10.1",
