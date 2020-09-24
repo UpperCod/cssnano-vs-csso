@@ -5,22 +5,29 @@
     "csstextResult": {
         "name": "csstextResult",
         "entryType": "measure",
-        "startTime": 684.699699,
-        "duration": 25.0122,
+        "startTime": 713.2674,
+        "duration": 25.4914,
         "size": 2380419
+    },
+    "postcssCssoResult": {
+        "name": "postcssCssoResult",
+        "entryType": "measure",
+        "startTime": 0,
+        "duration": 3222.4444,
+        "size": 1582221
     },
     "cssnanoResult": {
         "name": "cssnanoResult",
         "entryType": "measure",
-        "startTime": 710.2066,
-        "duration": 8696.8276,
+        "startTime": 3222.5744,
+        "duration": 8473.6205,
         "size": 1926020
     },
     "cssoResult": {
         "name": "cssoResult",
         "entryType": "measure",
-        "startTime": 9407.1396,
-        "duration": 1395.4708,
+        "startTime": 11696.261499,
+        "duration": 1069.968601,
         "size": 1582221
     }
 }

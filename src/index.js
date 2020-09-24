@@ -1,5 +1,6 @@
 import { PerformanceObserver, performance } from "perf_hooks";
 import { loadCssnano } from "./load-cssnano";
+import { loadpostcssCsso } from "./load-postcss-csso";
 import { loadCsso } from "./load-csso";
 import { readFile, writeFile } from "fs/promises";
 
@@ -23,6 +24,16 @@ async function test() {
     sizes.csstextResult = cssText.length;
 
     performance.measure("csstextResult", "csstext");
+
+    performance.mark("postcssCsso");
+
+    const postcssCssoResult = await loadpostcssCsso(cssText);
+
+    sizes.postcssCssoResult = postcssCssoResult.length;
+
+    performance.measure("postcssCssoResult", "cssnano");
+
+    performance.mark("csso");
 
     performance.mark("cssnano");
 

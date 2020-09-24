@@ -23,6 +23,7 @@
     "dependencies": {
         "cssnano": "^4.1.10",
         "csso": "^4.0.3",
+        "postcss-csso": "^4.0.0",
         "tailwindcss": "^1.8.10"
     },
     "devDependencies": {
