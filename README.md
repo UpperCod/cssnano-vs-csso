@@ -2,32 +2,32 @@
 
 ```json
 {
-    "csstextResult": {
-        "name": "csstextResult",
+    "Result: readCss": {
+        "name": "Result: readCss",
         "entryType": "measure",
-        "startTime": 713.2674,
-        "duration": 25.4914,
+        "startTime": 841.880399,
+        "duration": 25.638701,
         "size": 2380419
     },
-    "postcssCssoResult": {
-        "name": "postcssCssoResult",
+    "Result: Postcss + Csso": {
+        "name": "Result: Postcss + Csso",
         "entryType": "measure",
-        "startTime": 0,
-        "duration": 3222.4444,
+        "startTime": 868.0552,
+        "duration": 2386.079299,
         "size": 1582221
     },
-    "cssnanoResult": {
-        "name": "cssnanoResult",
+    "Result: Cssnano": {
+        "name": "Result: Cssnano",
         "entryType": "measure",
-        "startTime": 3222.5744,
-        "duration": 8473.6205,
+        "startTime": 3254.218599,
+        "duration": 8474.700701,
         "size": 1926020
     },
-    "cssoResult": {
-        "name": "cssoResult",
+    "Result: Csso": {
+        "name": "Result: Csso",
         "entryType": "measure",
-        "startTime": 11696.261499,
-        "duration": 1069.968601,
+        "startTime": 11729.0045,
+        "duration": 1031.7848,
         "size": 1582221
     }
 }

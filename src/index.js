@@ -13,43 +13,30 @@ new PerformanceObserver((items) => {
     status[entry.name].size = sizes[entry.name];
 }).observe({ entryTypes: ["measure"] });
 
-async function test() {
-    performance.mark("csstext");
+/**
+ * @param {string} mark
+ * @param {()=>Promise<string>|string} load
+ * @returns {Promise<string>}
+ */
+async function createRegister(mark, load) {
+    performance.mark(mark);
+    const markResult = "Result: " + mark;
+    const result = await load();
+    sizes[markResult] = result.length;
+    performance.measure(markResult, mark);
+    return result;
+}
 
-    const cssText = await readFile(
-        require.resolve("tailwindcss/dist/tailwind.css"),
-        "utf8"
+async function test() {
+    const cssText = await createRegister("readCss", () =>
+        readFile(require.resolve("tailwindcss/dist/tailwind.css"), "utf8")
     );
 
-    sizes.csstextResult = cssText.length;
+    await createRegister("Postcss + Csso", () => loadpostcssCsso(cssText));
 
-    performance.measure("csstextResult", "csstext");
+    await createRegister("Cssnano", () => loadCssnano(cssText));
 
-    performance.mark("postcssCsso");
-
-    const postcssCssoResult = await loadpostcssCsso(cssText);
-
-    sizes.postcssCssoResult = postcssCssoResult.length;
-
-    performance.measure("postcssCssoResult", "cssnano");
-
-    performance.mark("csso");
-
-    performance.mark("cssnano");
-
-    const cssnanoResult = await loadCssnano(cssText);
-
-    sizes.cssnanoResult = cssnanoResult.length;
-
-    performance.measure("cssnanoResult", "cssnano");
-
-    performance.mark("csso");
-
-    const cssoResult = await loadCsso(cssText);
-
-    sizes.cssoResult = cssoResult.length;
-
-    performance.measure("cssoResult", "csso");
+    await createRegister("Csso", () => loadCsso(cssText));
 
     console.log(status);
 
