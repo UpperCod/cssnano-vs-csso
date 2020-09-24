@@ -8,10 +8,7 @@
         "access": "public"
     },
     "scripts": {
-        "build": "rollup -c",
-        "dev": "rollup -c -w",
-        "test": "ava",
-        "prepare": "npm run build && npm test"
+        "test": "node -r esm src/index.js"
     },
     "repository": {
         "type": "git",
